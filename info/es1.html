@@ -41,6 +41,7 @@ git<!doctype html>
     <section id="ciao">
       <div class="container-fluid">
         <div class="row" id="contenitoreDiCards">
+
         </div>
       </div>
     </section>
@@ -87,12 +88,26 @@ git<!doctype html>
       dest.appendChild(clone);
         i++;
       if (i < 30) {
-        setTimeout(CreaCard, 1000);
+        setTimeout(CreaCard, 100);
+      }
+      else
+      {
+        cambiaImg();
       }
     }
 
-    
-
+    function cambiaImg()
+    {
+      const img = dest.querySelectorAll("img");
+      if(i == img.length)
+      {
+        i = 0;
+      }
+      const k = Math.floor(Math.random() * 1000);
+      img[i].src = `https://picsum.photos/seed/${k}/200/300`;
+      i++;
+        setTimeout(cambiaImg, 100);
+    }
     CreaCard();
   </script>
 </body>
