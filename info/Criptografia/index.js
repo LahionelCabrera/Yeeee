@@ -88,6 +88,7 @@ function Cripto(btn, mittente, destinatario) {
       TextCripto,
       document.getElementById("KeyCesare").value,
     );
+    StampaSlot(TextCripto);
   }
 
   if (document.getElementById("CheckVigenere").checked == 1) {
@@ -104,6 +105,12 @@ function Cripto(btn, mittente, destinatario) {
   document.getElementById(Mittente).value = "";
 }
 
-funtion StampaSlot(){
-  clone = document.getElementsByTagName("Template")
-}
+function StampaSlot(testo){
+  const dest = document.getElementById("Slots");
+  const templete = document.querySelector("Template").content;
+  dest.innerHTML = "";
+  const clone = templete.cloneNode(true);
+  for(let i = 0; i < char.length; i++){
+    dest.appendChil(clone);
+  }
+} 
