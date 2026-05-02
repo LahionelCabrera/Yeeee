@@ -87,7 +87,7 @@ function Cripto(btn, mittente, destinatario) {
       TextCripto,
       document.getElementById("KeyCesare").value,
     );
-    StampaSlot(TextCripto);
+    AnimazioneSlot("AnimazioneCesare", Testo.toUpperCase(), TextCripto);
   }
 
   if (document.getElementById("CheckVigenere").checked == 1) {
@@ -95,6 +95,7 @@ function Cripto(btn, mittente, destinatario) {
       TextCripto,
       document.getElementById("KeyVigenere").value,
     );
+    AnimazioneSlot("AnimazioneVigenere", Testo.toUpperCase(), TextCripto);
   }
 
   BoxMittente.innerHTML += Testo + "</br>";
@@ -121,6 +122,19 @@ function AnimazioneSlot(id, txtStart, txtEnd) {
   dest.innerHTML = "";
 
   for (let i = 0; i < txtStart.length; i++) {
+  
+    if(txtStart[i] == " ")
+  {
+    const newRullo = document.createElement("div");
+    newRullo.className = "rullo";
+    dest.appendChild(newRullo);
+    const blocco = document.createElement("div");
+    blocco.className = "blocco";
+    blocco.textContent = "/";
+    newRullo.appendChild(blocco);
+    continue;
+  }
+
     const newRullo = document.createElement("div");
     newRullo.className = "rullo";
     dest.appendChild(newRullo);

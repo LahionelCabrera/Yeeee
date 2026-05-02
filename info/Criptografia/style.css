@@ -28,6 +28,7 @@ body {
   text-align: center;
   justify-content: center;
   display: flex;
+  overflow-x: scroll;
 }
 
 .rullo {
@@ -39,4 +40,6 @@ body {
   height: 50px;
   line-height: 50px;
   font-size: 24px;
+  margin: 0;
+  justify-content: center;
 }
