@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Triz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Tris</h1>
+    
+    <h2 id="messaggio">Tocca al giocatore X</h2>
+
+    <p>Tempo perso a giocare: <span id="timer">0</span> secondi.</p>
+
+    <div id="griglia">
+        <div class="cella" onclick="faiMossa(0)"></div>
+        <div class="cella" onclick="faiMossa(1)"></div>
+        <div class="cella" onclick="faiMossa(2)"></div>
+        <div class="cella" onclick="faiMossa(3)"></div>
+        <div class="cella" onclick="faiMossa(4)"></div>
+        <div class="cella" onclick="faiMossa(5)"></div>
+        <div class="cella" onclick="faiMossa(6)"></div>
+        <div class="cella" onclick="faiMossa(7)"></div>
+        <div class="cella" onclick="faiMossa(8)"></div>
+    </div>
+
+    <br>
+    <button id="bottoneReset">Ricomincia la partita</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
